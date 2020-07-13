@@ -1,0 +1,36 @@
+﻿<p-dialog header="" [(visible)]="dialogDisplayPosition" [position]="dialogPosition" [modal]="true"
+  [style]="{width: '50vw', height: '50vw'}" [maximizable]="true" [baseZIndex]="10000" [draggable]="false"
+  [resizable]="false" [blockScroll]="false" [keepInViewport]="true">
+
+  <div class="pageTitle">Standorte</div>
+
+  <p-treeTable [value]="itemList" selectionMode="single" [(selection)]="selectedTableLocation" dataKey="id">
+    <ng-template pTemplate="header">
+      <tr>
+        <th id="locationName">Standorte</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+      <tr [ttRow]="rowNode" [ttSelectableRow]="rowNode">
+        <td>
+          <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+          {{rowData.label}}
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div style="text-align: left">
+        Auswahl: <span
+          style="font-weight: normal">{{selectedTableLocation ? selectedTableLocation.data.path: ''}}</span>
+      </div>
+    </ng-template>
+  </p-treeTable>
+
+
+  <p-footer>
+    <button type="button" pButton icon="pi pi-check" (click)="onItemSelected()" label="OK"></button>
+    <button type="button" pButton icon="pi pi-times" (click)="onItemSelectionCancelled()" label="Abbrechen"
+      class="ui-button-warning"></button>
+    <button pButton type="button" (click)="onEmptySelectionClick()" label="keine Auswahl"></button>
+  </p-footer>
+</p-dialog>

@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "sany-web-ui-lib",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "sany-web-ui-lib",
+      "kebab-case"
+    ]
+  }
+}

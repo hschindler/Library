@@ -1,0 +1,11 @@
+.subContainer {
+    position: relative;
+    min-height: calc(100vh - 60px);  
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 900;
+}
+/* .pageTitle {
+	font-size: 1.5em;
+	padding-top: 30px;
+} */

@@ -1,0 +1,15 @@
+.pageTitle {
+	font-size: 1.5em;
+	padding-top: 15px;
+	margin-bottom: 10px;
+}
+
+.rowColorGreen {
+      /*background-color:green;*/
+      color: #2eb82e;
+}
+
+.rowColorRed {
+      /*background-color:red;*/
+      color: #e60000;
+}
